@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.libretto.LibrettoController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="it.polito.tdp.libretto.LibrettoController">
+   <top>
+      <Label text="Libretto Universitario" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="AppleGothic Regular" size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="txtCodice" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                  <TextField fx:id="txtTitolo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtDocente" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Codice" />
+                  <Label text="Titolo" GridPane.columnIndex="1" />
+                  <Label text="Docente" GridPane.columnIndex="2" />
+                  <Button fx:id="btnCerca" mnemonicParsing="false" onAction="#handleCerca" text="Cerca" GridPane.rowIndex="3" />
+                  <Button fx:id="btnInserisci" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleInserisci" text="Inserisci" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <TextArea fx:id="txtMessage" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
