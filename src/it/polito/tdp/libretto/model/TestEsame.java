@@ -18,7 +18,7 @@ public class TestEsame {
 		
 		tdp.supera(30,  LocalDate.now());
 		System.out.println(tdp);
-		//tdp.supera(18,  LocalDate.now());
+		tdp.supera(18,  LocalDate.now());
 	}
 
 }
